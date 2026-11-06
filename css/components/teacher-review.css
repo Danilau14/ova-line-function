@@ -1,0 +1,17 @@
+.ova-review-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ova-space-4);
+}
+.ova-review-list__key {
+  padding-bottom: var(--ova-space-3);
+  border-bottom: var(--ova-stroke) solid var(--ova-border);
+}
+.ova-review-list__entry {
+  padding-block: var(--ova-space-3);
+  border-bottom: var(--ova-stroke) solid var(--ova-border);
+}
+.ova-review-list__entry:last-child { border-bottom: 0; padding-bottom: 0; }
+.ova-review-list__prompt { margin: 0; color: var(--ova-blue); font-weight: 700; }
+.ova-review-list__explanation { margin: var(--ova-space-1) 0 0; }
+.ova-review-list__answer { margin: var(--ova-space-1) 0 0; color: var(--ova-ok-dark); font-weight: 700; }

@@ -1,0 +1,79 @@
+.ova-machine__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ova-space-2);
+  margin-block: var(--ova-space-3);
+}
+.ova-machine__tab[aria-pressed="true"] {
+  background: var(--ova-blue);
+  border-color: var(--ova-blue);
+  color: var(--ova-text-inverse);
+}
+
+.ova-machine {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ova-space-3);
+}
+.ova-machine__lab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ova-space-4);
+  justify-content: space-around;
+}
+.ova-machine__frame { flex: 1 1 10rem; max-width: var(--ova-machine-width); margin-inline: auto; }
+.ova-machine__controls {
+  display: flex;
+  flex: 1.2 1 14rem;
+  flex-direction: column;
+  gap: var(--ova-space-2);
+  min-width: 0;
+}
+
+/* The drawing. State lives in data-state: idle, processing, done. */
+.ova-machine__svg { display: block; width: 100%; height: auto; overflow: visible; }
+.ova-machine__funnel { fill: var(--ova-machine-funnel); }
+.ova-machine__body { fill: var(--ova-machine-body); }
+.ova-machine__screen { fill: var(--ova-machine-screen); }
+.ova-machine__label { fill: var(--ova-text-inverse); font-size: var(--ova-svg-text-compact); font-weight: 700; }
+.ova-machine__status { fill: var(--ova-blue); font-size: var(--ova-svg-text); font-weight: 700; }
+.ova-machine__light { fill: var(--ova-neutral); }
+.ova-machine__token { fill: var(--ova-red-dark); font-size: var(--ova-svg-text); font-weight: 700; }
+
+.ova-machine__svg[data-state="processing"] .ova-machine__light { fill: var(--ova-coral); animation: ova-machine-blink .3s steps(2) infinite; }
+.ova-machine__svg[data-state="processing"] .ova-machine__screen { animation: ova-machine-work .55s ease-in-out infinite alternate; }
+.ova-machine__svg[data-state="processing"] .ova-machine__token--in { animation: ova-machine-enter 1.1s ease-in forwards; }
+.ova-machine__svg[data-state="done"] .ova-machine__light { fill: var(--ova-ok); }
+.ova-machine__svg[data-state="done"] .ova-machine__token--in { opacity: 0; }
+.ova-machine__svg[data-state="done"] .ova-machine__token--out { animation: ova-machine-exit .6s ease-out; }
+
+@keyframes ova-machine-blink { 50% { opacity: .3; } }
+@keyframes ova-machine-work { to { opacity: .55; } }
+@keyframes ova-machine-enter {
+  60% { transform: translateY(50px); opacity: 1; }
+  100% { transform: translateY(80px); opacity: 0; }
+}
+@keyframes ova-machine-exit {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+
+.ova-machine__next { align-self: flex-end; }
+.ova-machine__log { margin-top: var(--ova-space-1); }
+.ova-machine__challenge {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ova-space-2);
+  padding: var(--ova-space-3);
+  background: var(--ova-bg);
+  border: var(--ova-stroke) solid var(--ova-border);
+  border-radius: var(--ova-radius-btn);
+}
+.ova-machine__prompt { margin: 0; color: var(--ova-blue); font-weight: 700; }
+.ova-machine__reveal {
+  margin: 0;
+  padding: var(--ova-space-2) var(--ova-space-3);
+  background: var(--ova-ok-soft);
+  border-radius: var(--ova-radius-btn);
+  color: var(--ova-ok-dark);
+}

@@ -1,0 +1,37 @@
+.ova-feedback:empty { display: none; }
+.ova-feedback__message {
+  margin: var(--ova-space-2) 0 0;
+  padding: var(--ova-space-2) var(--ova-space-3);
+  border-radius: var(--ova-radius-btn);
+}
+.ova-feedback__message[data-state="ok"] { background: var(--ova-ok-soft); color: var(--ova-ok-dark); }
+.ova-feedback__message[data-state="ok"]::before { content: "✔ "; }
+.ova-feedback__message[data-state="error"],
+.ova-feedback__message[data-state="empty"] { background: var(--ova-bg-2); color: var(--ova-text); }
+.ova-feedback__message[data-state="hint"] {
+  background: var(--ova-coral-soft);
+  border-left: var(--ova-stroke-accent) solid var(--ova-coral);
+  color: var(--ova-coral-dark);
+}
+.ova-feedback__message[data-state="hint"]::before { content: "💡 "; }
+.ova-feedback__message[data-state="solved"] {
+  background: var(--ova-bg-2);
+  border-left: var(--ova-stroke-accent) solid var(--ova-blue);
+  color: var(--ova-text);
+}
+.ova-feedback__message[data-state="solved"]::before { content: "📘 "; }
+
+.ova-review {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ova-space-2);
+  margin-top: var(--ova-space-4);
+}
+.ova-review__button,
+.ova-review__solution { width: 100%; }
+.ova-review .ova-feedback { flex: 1 1 100%; }
+
+@media (min-width: 48rem) {
+  .ova-review__button,
+  .ova-review__solution { width: auto; }
+}

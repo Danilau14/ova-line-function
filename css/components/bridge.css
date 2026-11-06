@@ -1,0 +1,8 @@
+.ova-bridge {
+  display: flex;
+  gap: var(--ova-space-3);
+  padding: var(--ova-space-4);
+  border-top: var(--ova-stroke) solid var(--ova-border);
+  color: var(--ova-blue);
+}
+.ova-bridge__arrow { flex: none; }

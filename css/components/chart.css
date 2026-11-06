@@ -1,0 +1,78 @@
+.ova-chart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ova-space-3);
+}
+.ova-chart__instruction { margin: 0; color: var(--ova-text-soft); font-size: var(--ova-text-s); }
+.ova-chart__frame {
+  background: var(--ova-bg);
+  border: var(--ova-stroke) solid var(--ova-bg-2);
+  border-radius: var(--ova-radius-btn);
+  overflow: hidden;
+}
+.ova-chart__svg { display: block; width: 100%; height: auto; touch-action: pan-y; cursor: pointer; }
+
+.ova-chart__grid { stroke: var(--ova-border); stroke-width: 1; }
+.ova-chart__axis { stroke: var(--ova-blue); stroke-width: 3.5; }
+.ova-chart__line { fill: none; stroke: var(--ova-blue); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+.ova-chart__vertex { fill: var(--ova-blue); r: var(--ova-svg-vertex); }
+.ova-chart__point { fill: var(--ova-red); stroke: var(--ova-bg-card); stroke-width: 4; r: var(--ova-svg-point); }
+.ova-chart__guide { stroke: var(--ova-red); stroke-width: 2.5; stroke-dasharray: 5 5; }
+.ova-chart__tick { fill: var(--ova-text); font-size: var(--ova-svg-text); }
+.ova-chart__name { fill: var(--ova-blue); font-size: var(--ova-svg-text); font-weight: 700; }
+.ova-chart__mark { fill: var(--ova-text); font-size: var(--ova-svg-text); }
+.ova-chart__coord-bg { fill: var(--ova-bg-card); stroke: var(--ova-blue); stroke-width: 2.5; }
+.ova-chart__coord-text { fill: var(--ova-blue); font-size: var(--ova-svg-text); font-weight: 700; }
+
+.ova-chart__svg--compact {
+  --ova-svg-text: var(--ova-svg-text-compact);
+  --ova-svg-vertex: var(--ova-svg-vertex-compact);
+  --ova-svg-point: var(--ova-svg-point-compact);
+}
+.ova-chart__svg--compact .ova-chart__line { stroke-width: 3.5; }
+.ova-chart__svg--compact .ova-chart__axis { stroke-width: 2.5; }
+
+.ova-chart__line[data-segment="up"] { stroke: var(--ova-ok); }
+.ova-chart__line[data-segment="down"] { stroke: var(--ova-red); }
+.ova-chart__line[data-segment="flat"] { stroke: var(--ova-neutral); }
+
+.ova-chart__slider {
+  width: 100%;
+  min-height: var(--ova-touch);
+  margin: 0;
+  accent-color: var(--ova-red-dark);
+  cursor: pointer;
+}
+.ova-chart__readout {
+  margin: 0;
+  padding: var(--ova-space-2) var(--ova-space-3);
+  background: var(--ova-bg-2);
+  border-radius: var(--ova-radius-btn);
+  color: var(--ova-blue);
+  text-align: center;
+}
+
+.ova-chart__segments {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ova-space-2);
+}
+.ova-chart__segment {
+  min-height: var(--ova-touch);
+  padding: var(--ova-space-2) var(--ova-space-3);
+  background: var(--ova-bg);
+  border: var(--ova-stroke) solid var(--ova-border);
+  border-radius: var(--ova-radius-btn);
+  color: var(--ova-text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.ova-chart__segment:hover:not(:disabled) { background: var(--ova-bg-2); }
+.ova-chart__segment:disabled { cursor: default; }
+.ova-chart__segment[data-segment="up"] { background: var(--ova-ok-soft); border-color: var(--ova-ok); }
+.ova-chart__segment[data-segment="down"] { background: var(--ova-coral-soft); border-color: var(--ova-red-dark); }
+.ova-chart__segment[data-segment="flat"] { background: var(--ova-bg-2); border-color: var(--ova-text-soft); }
+.ova-chart__segment[data-state="revealed"]::after { content: " 📘"; }
+.ova-chart__segment[data-state="ok"]::after { content: " ✔"; color: var(--ova-ok-dark); }
+.ova-chart__segment[data-state="error"]::after { content: " ✖"; color: var(--ova-red-dark); }

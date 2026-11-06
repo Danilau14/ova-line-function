@@ -1,0 +1,40 @@
+.ova-chat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ova-space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ova-chat__message {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--ova-space-2);
+}
+.ova-chat__message--me { flex-direction: row-reverse; }
+
+.ova-chat__avatar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--ova-avatar);
+  height: var(--ova-avatar);
+  background: var(--ova-bg-2);
+  border-radius: var(--ova-radius-full);
+}
+.ova-chat__bubble {
+  max-width: var(--ova-bubble-max);
+  padding: var(--ova-space-2) var(--ova-space-3);
+  background: var(--ova-bg-2);
+  border-radius: var(--ova-radius);
+}
+.ova-chat__message--me .ova-chat__bubble {
+  background: var(--ova-red-dark);
+  color: var(--ova-text-inverse);
+}
+.ova-chat__who {
+  display: block;
+  font-size: var(--ova-text-s);
+  font-weight: 700;
+}

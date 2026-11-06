@@ -1,0 +1,22 @@
+.ova-field {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ova-space-1);
+}
+.ova-field__input {
+  width: var(--ova-field-width);
+  min-height: var(--ova-touch);
+  padding: var(--ova-space-1) var(--ova-space-2);
+  background: var(--ova-bg-card);
+  border: var(--ova-stroke-2) solid var(--ova-text-soft);
+  border-radius: var(--ova-radius-btn);
+  color: var(--ova-text);
+  font: inherit;
+  text-align: center;
+}
+.ova-field[data-state="ok"] .ova-field__input { background: var(--ova-ok-soft); border-color: var(--ova-ok); }
+.ova-field[data-state="error"] .ova-field__input { border-color: var(--ova-red-dark); }
+.ova-field[data-state="revealed"] .ova-field__input { background: var(--ova-bg-2); border-color: var(--ova-blue); }
+.ova-field[data-state="revealed"]::after { content: "📘"; }
+.ova-field[data-state="ok"]::after { content: "✔"; color: var(--ova-ok-dark); }
+.ova-field[data-state="error"]::after { content: "✖"; color: var(--ova-red-dark); }

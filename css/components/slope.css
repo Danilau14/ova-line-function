@@ -1,0 +1,58 @@
+.ova-slope {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ova-space-3);
+}
+.ova-slope__run { stroke: var(--ova-ok); stroke-width: 3.5; stroke-dasharray: 8 5; }
+.ova-slope__rise { stroke: var(--ova-red); stroke-width: 3.5; stroke-dasharray: 8 5; }
+.ova-slope__amounts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--ova-space-2);
+}
+.ova-slope__amounts:empty { display: none; }
+.ova-slope__amount {
+  padding: var(--ova-space-1) var(--ova-space-3);
+  background: var(--ova-bg-2);
+  border-bottom: var(--ova-stroke-accent) dashed var(--ova-ok);
+  border-radius: var(--ova-radius-btn);
+  color: var(--ova-blue);
+  font-size: var(--ova-text-s);
+  font-weight: 700;
+}
+.ova-slope__amount[data-kind="rise"] { border-bottom-color: var(--ova-red); }
+
+.ova-slope__equation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ova-space-2);
+  padding: var(--ova-space-3);
+  background: var(--ova-bg-2);
+  border-radius: var(--ova-radius-btn);
+}
+.ova-slope__symbol { color: var(--ova-blue); font-size: var(--ova-text-l); font-weight: 700; }
+.ova-slope__fraction { display: flex; flex-direction: column; }
+.ova-slope__part {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ova-space-2);
+  padding: var(--ova-space-2);
+}
+.ova-slope__minus { color: var(--ova-blue); font-weight: 700; }
+.ova-slope__points { margin: 0; color: var(--ova-blue); font-size: var(--ova-text-s); text-align: center; }
+.ova-slope__part--bottom { border-top: var(--ova-stroke-focus) solid var(--ova-blue); }
+.ova-slope .ova-field__input { width: var(--ova-slope-field); }
+
+.ova-slope__live {
+  padding: var(--ova-space-3);
+  background: var(--ova-bg-2);
+  border-radius: var(--ova-radius-btn);
+  color: var(--ova-blue);
+  font-size: var(--ova-text-l);
+  text-align: center;
+}

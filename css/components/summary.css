@@ -1,0 +1,9 @@
+.ova-box--summary { border: var(--ova-stroke-2) solid var(--ova-blue); }
+.ova-summary { margin: 0; }
+.ova-summary__term {
+  margin-top: var(--ova-space-3);
+  color: var(--ova-blue);
+  font-weight: 700;
+}
+.ova-summary__term:first-child { margin-top: 0; }
+.ova-summary__definition { margin: 0; }

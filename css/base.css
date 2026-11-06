@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Didact Gothic";
+  src: url("fonts/didact-gothic-latin-400-normal.woff2") format("woff2"),
+       url("fonts/didact-gothic-latin-400-normal.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--ova-topbar-height) + var(--ova-space-2));
+}
+
+body {
+  margin: 0;
+  background: var(--ova-bg);
+  color: var(--ova-text);
+  font-family: var(--ova-font);
+  font-size: var(--ova-text-m);
+  line-height: var(--ova-leading);
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  color: var(--ova-blue);
+  font-weight: 400;
+  line-height: var(--ova-leading-title);
+}
+
+p { margin: 0 0 var(--ova-space-3); }
+p:last-child { margin-bottom: 0; }
+
+ul, ol { margin: 0 0 var(--ova-space-3); padding-left: var(--ova-space-5); }
+ul:last-child, ol:last-child { margin-bottom: 0; }
+
+img, svg { max-width: 100%; }
+
+a { color: var(--ova-red-dark); }
+
+:focus { outline: none; }
+
+:focus-visible {
+  outline: var(--ova-stroke-focus) solid var(--ova-blue);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

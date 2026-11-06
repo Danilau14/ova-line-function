@@ -1,0 +1,16 @@
+.ova-sagittal { max-width: var(--ova-figure-max); margin-inline: auto; }
+.ova-sagittal__svg { display: block; width: 100%; height: auto; }
+.ova-sagittal__help { color: var(--ova-text-soft); font-size: var(--ova-text-s); }
+.ova-sagittal__set { fill: var(--ova-blue); font-size: var(--ova-svg-text-compact); font-weight: 700; }
+.ova-sagittal__oval { fill: var(--ova-bg-2); }
+.ova-sagittal__chip { fill: var(--ova-bg-card); stroke: var(--ova-border); stroke-width: 2; }
+.ova-sagittal__label { fill: var(--ova-text); font-size: var(--ova-svg-text-compact); }
+.ova-sagittal__arrow { stroke: var(--ova-blue); stroke-width: 2.5; }
+.ova-sagittal__arrow[data-state="error"] { stroke: var(--ova-red-dark); stroke-dasharray: 6 5; }
+.ova-sagittal__head { fill: var(--ova-blue); }
+.ova-sagittal__node[role="button"] { cursor: pointer; }
+.ova-sagittal__node[aria-pressed="true"] .ova-sagittal__chip { fill: var(--ova-blue); stroke: var(--ova-blue); }
+.ova-sagittal__node[aria-pressed="true"] .ova-sagittal__label { fill: var(--ova-text-inverse); }
+.ova-sagittal__node:focus-visible { outline: none; }
+.ova-sagittal__node:focus-visible .ova-sagittal__chip { stroke: var(--ova-blue); stroke-width: 4; }
+.ova-sagittal__pairs { margin: var(--ova-space-2) 0 0; font-size: var(--ova-text-s); }

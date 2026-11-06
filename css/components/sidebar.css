@@ -1,0 +1,119 @@
+/* Mobile first: off-canvas drawer. From 64rem it becomes a column beside the content. */
+.ova-sidebar {
+  position: fixed;
+  z-index: var(--ova-z-drawer);
+  inset: 0 auto 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ova-space-3);
+  width: var(--ova-sidebar-width);
+  max-width: var(--ova-drawer-max);
+  padding: var(--ova-space-3);
+  overflow-y: auto;
+  background: var(--ova-bg-card);
+  border-right: var(--ova-stroke) solid var(--ova-border);
+  visibility: hidden;
+  transform: translateX(-100%);
+  transition: transform var(--ova-motion), visibility var(--ova-motion);
+}
+body[data-sidebar="open"] .ova-sidebar {
+  visibility: visible;
+  transform: none;
+  /* Visible at once when opening, so focus can move inside right away. */
+  transition: transform var(--ova-motion), visibility 0s;
+}
+
+.ova-sidebar__scrim {
+  position: fixed;
+  z-index: var(--ova-z-scrim);
+  inset: 0;
+  display: none;
+  background: var(--ova-scrim);
+}
+body[data-sidebar="open"] .ova-sidebar__scrim { display: block; }
+
+.ova-sidebar__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ova-space-2);
+}
+.ova-sidebar__unit { margin: 0; color: var(--ova-blue); font-size: var(--ova-text-s); }
+.ova-sidebar__close {
+  flex: none;
+  width: var(--ova-touch);
+  height: var(--ova-touch);
+  background: none;
+  border: var(--ova-stroke) solid var(--ova-border);
+  border-radius: var(--ova-radius-btn);
+  color: var(--ova-blue);
+  font: inherit;
+  cursor: pointer;
+}
+
+.ova-menu__list,
+.ova-menu__pages {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ova-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ova-space-1);
+}
+.ova-menu__pages {
+  margin: var(--ova-space-1) 0 var(--ova-space-2) var(--ova-space-3);
+  padding-left: var(--ova-space-2);
+  border-left: var(--ova-stroke-2) solid var(--ova-border);
+}
+
+.ova-menu__link,
+.ova-menu__page {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: var(--ova-touch);
+  padding: var(--ova-space-2) var(--ova-space-3);
+  background: none;
+  border: 0;
+  border-radius: var(--ova-radius-btn);
+  color: var(--ova-blue);
+  font: inherit;
+  font-size: var(--ova-text-s);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ova-menu__link:hover,
+.ova-menu__page:hover { background: var(--ova-bg-2); }
+.ova-menu__link[aria-current="true"] { color: var(--ova-red-dark); font-weight: 700; }
+.ova-menu__page[aria-current="page"] { background: var(--ova-bg-2); }
+.ova-menu__page[aria-current="page"]::before { content: "▶"; margin-right: var(--ova-space-2); color: var(--ova-red-dark); }
+.ova-menu__pending {
+  display: flex;
+  align-items: center;
+  min-height: var(--ova-touch);
+  padding: var(--ova-space-2) var(--ova-space-3);
+  color: var(--ova-text-soft);
+  font-size: var(--ova-text-s);
+}
+
+@media (min-width: 64rem) {
+  .ova-sidebar {
+    position: sticky;
+    z-index: auto;
+    top: var(--ova-topbar-height);
+    inset-inline: auto;
+    bottom: auto;
+    width: auto;
+    max-width: none;
+    height: calc(100vh - var(--ova-topbar-height));
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+  body[data-sidebar="closed"] .ova-sidebar { display: none; }
+  body[data-sidebar="open"] .ova-sidebar__scrim { display: none; }
+  .ova-sidebar__close { display: none; }
+}

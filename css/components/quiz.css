@@ -1,0 +1,48 @@
+.ova-quiz__questions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ova-space-4);
+}
+.ova-quiz__line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ova-space-2);
+}
+.ova-quiz__group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.ova-quiz__prompt { padding: 0 0 var(--ova-space-2); }
+.ova-quiz__option {
+  display: flex;
+  align-items: center;
+  gap: var(--ova-space-3);
+  min-height: var(--ova-touch);
+  padding: var(--ova-space-1) var(--ova-space-3);
+  border-radius: var(--ova-radius-btn);
+  cursor: pointer;
+}
+.ova-quiz__option:hover { background: var(--ova-bg-2); }
+.ova-quiz__radio {
+  flex: none;
+  width: var(--ova-radio-mark);
+  height: var(--ova-radio-mark);
+  margin: 0;
+  accent-color: var(--ova-red-dark);
+}
+
+/* A figure inside a question uses the full width: no second card around it. */
+.ova-quiz__question .ova-box {
+  margin-bottom: var(--ova-space-3);
+  padding: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+
+.ova-quiz__question--choice[data-state="revealed"] .ova-quiz__prompt::after { content: " 📘"; }
+.ova-quiz__question--choice[data-state="ok"] .ova-quiz__prompt::after { content: " ✔"; color: var(--ova-ok-dark); }
+.ova-quiz__question--choice[data-state="error"] .ova-quiz__prompt::after { content: " ✖"; color: var(--ova-red-dark); }

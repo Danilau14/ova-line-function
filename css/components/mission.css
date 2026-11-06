@@ -1,0 +1,14 @@
+.ova-mission {
+  background: var(--ova-bg-card);
+  border: var(--ova-stroke-2) solid var(--ova-red);
+  border-radius: var(--ova-radius);
+}
+.ova-mission__summary {
+  display: flex;
+  align-items: center;
+  min-height: var(--ova-touch);
+  padding: var(--ova-space-2) var(--ova-space-4);
+  color: var(--ova-red-dark);
+  cursor: pointer;
+}
+.ova-mission__body { padding: 0 var(--ova-space-4) var(--ova-space-4); }

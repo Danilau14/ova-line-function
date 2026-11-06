@@ -1,0 +1,24 @@
+.ova-btn {
+  min-height: var(--ova-touch);
+  min-width: var(--ova-touch);
+  padding: var(--ova-space-2) var(--ova-space-4);
+  background: var(--ova-red-dark);
+  border: var(--ova-stroke) solid var(--ova-red-dark);
+  border-radius: var(--ova-radius-btn);
+  color: var(--ova-text-inverse);
+  font: inherit;
+  cursor: pointer;
+}
+.ova-btn:hover:not(:disabled) { background: var(--ova-blue); border-color: var(--ova-blue); }
+.ova-btn:disabled {
+  background: var(--ova-bg-2);
+  border-color: var(--ova-border);
+  color: var(--ova-text-soft);
+  cursor: not-allowed;
+}
+.ova-btn--soft {
+  background: var(--ova-bg-card);
+  border-color: var(--ova-border);
+  color: var(--ova-blue);
+}
+.ova-btn--soft:hover:not(:disabled) { color: var(--ova-text-inverse); }

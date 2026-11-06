@@ -1,0 +1,24 @@
+.ova-progress { padding-top: var(--ova-space-3); }
+.ova-progress__label {
+  margin: 0 0 var(--ova-space-1);
+  color: var(--ova-text-soft);
+  font-size: var(--ova-text-s);
+}
+.ova-progress__bar {
+  display: block;
+  width: 100%;
+  height: var(--ova-space-2);
+  accent-color: var(--ova-red-dark);
+}
+
+.ova-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--ova-space-3);
+  padding-block: var(--ova-space-3);
+}
+.ova-pager__btn { flex: 1 1 0; }
+
+@media (min-width: 48rem) {
+  .ova-pager__btn { flex: 0 0 auto; }
+}

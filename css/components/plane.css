@@ -1,0 +1,81 @@
+.ova-plane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ova-space-3);
+}
+.ova-plane__help { margin: 0; color: var(--ova-text-soft); font-size: var(--ova-text-s); }
+.ova-plane__frame {
+  width: 100%;
+  max-width: var(--ova-figure-max);
+  margin-inline: auto;
+  background: var(--ova-bg);
+  border: var(--ova-stroke) solid var(--ova-bg-2);
+  border-radius: var(--ova-radius-btn);
+  overflow: hidden;
+}
+.ova-plane__svg { display: block; width: 100%; height: auto; touch-action: pan-y; }
+.ova-plane__grid { stroke: var(--ova-border); stroke-width: 1; }
+.ova-plane__axis { stroke: var(--ova-blue); stroke-width: 2.5; }
+.ova-plane__tick { fill: var(--ova-text); font-size: var(--ova-svg-text-compact); }
+.ova-plane__name { fill: var(--ova-blue); font-size: var(--ova-svg-text-compact); font-weight: 700; }
+.ova-plane__line { fill: none; stroke: var(--ova-blue); stroke-width: 3.5; stroke-linejoin: round; }
+.ova-plane__guide { stroke: var(--ova-red); stroke-width: 2.5; stroke-dasharray: 6 5; }
+.ova-plane__point { fill: var(--ova-red); stroke: var(--ova-bg-card); stroke-width: 2.5; r: var(--ova-svg-point-compact); }
+.ova-plane__mark { fill: var(--ova-blue); r: var(--ova-svg-point-compact); }
+.ova-plane__point[data-state="error"] { fill: var(--ova-bg-card); stroke: var(--ova-neutral); stroke-dasharray: 3 3; }
+.ova-plane__coord-bg { fill: var(--ova-bg-card); stroke: var(--ova-blue); stroke-width: 2; }
+.ova-plane__coord-text { fill: var(--ova-blue); font-size: var(--ova-svg-text-compact); font-weight: 700; }
+.ova-plane__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--ova-space-3);
+}
+.ova-plane__selector {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--ova-text-s);
+}
+.ova-plane__select {
+  min-height: var(--ova-touch);
+  padding-inline: var(--ova-space-2);
+  background: var(--ova-bg-card);
+  border: var(--ova-stroke-2) solid var(--ova-text-soft);
+  border-radius: var(--ova-radius-btn);
+  color: var(--ova-text);
+  font: inherit;
+}
+.ova-plane__points,
+.ova-plane__readout { margin: 0; font-size: var(--ova-text-s); }
+.ova-plane__readout {
+  padding: var(--ova-space-2) var(--ova-space-3);
+  background: var(--ova-bg-2);
+  border-radius: var(--ova-radius-btn);
+  color: var(--ova-blue);
+  text-align: center;
+}
+
+.ova-lab__line { stroke: var(--ova-blue); stroke-width: 3.5; }
+.ova-lab__line[data-line="1"] { stroke: var(--ova-red); stroke-dasharray: 12 7; }
+.ova-lab__point { fill: var(--ova-blue); stroke: var(--ova-bg-card); stroke-width: 2.5; r: var(--ova-svg-point-compact); }
+.ova-lab__point[data-line="1"] { fill: var(--ova-red); }
+.ova-lab__legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ova-space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ova-lab__item {
+  padding: var(--ova-space-2) var(--ova-space-3);
+  background: var(--ova-bg-2);
+  border-left: var(--ova-stroke-accent) solid var(--ova-blue);
+  border-radius: var(--ova-radius-btn);
+  color: var(--ova-blue);
+  font-size: var(--ova-text-s);
+}
+.ova-lab__item[data-line="1"] { border-left-color: var(--ova-red); border-left-style: dashed; }
+.ova-lab__control { display: flex; flex-direction: column; }
+.ova-lab__name { font-size: var(--ova-text-s); }
+.ova-lab__value { font-weight: 700; }

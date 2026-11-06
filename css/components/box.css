@@ -1,0 +1,32 @@
+.ova-box {
+  padding: var(--ova-space-4);
+  background: var(--ova-bg-card);
+  border: var(--ova-stroke) solid var(--ova-border);
+  border-radius: var(--ova-radius);
+  box-shadow: var(--ova-shadow);
+}
+.ova-box__head {
+  display: flex;
+  gap: var(--ova-space-2);
+  margin-bottom: var(--ova-space-3);
+}
+.ova-box__title { font-size: var(--ova-text-l); }
+
+.ova-box__locked {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ova-space-3);
+}
+.ova-box__waiting { flex: 1 1 12rem; margin: 0; color: var(--ova-text-soft); }
+
+.ova-box--naming {
+  background: var(--ova-bg-2);
+  border-left: var(--ova-stroke-accent) solid var(--ova-blue);
+}
+.ova-box--think { border-left: var(--ova-stroke-accent) solid var(--ova-red); }
+.ova-box--teacher { border: var(--ova-stroke-2) dashed var(--ova-blue); }
+
+@media (min-width: 48rem) {
+  .ova-box { padding: var(--ova-space-5); }
+}

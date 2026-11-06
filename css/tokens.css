@@ -1,0 +1,83 @@
+:root {
+  /* Color */
+  --ova-red: #dd2433;
+  --ova-red-dark: #b81a28;
+  --ova-coral: #ff7a66;
+  --ova-coral-soft: #fff0ed;
+  --ova-coral-dark: #8f3226;
+  --ova-blue: #232b52;
+  --ova-text: #262a3d;
+  --ova-text-soft: #596176;
+  --ova-text-inverse: #fff;
+  --ova-border: #dfe3f1;
+  --ova-bg: #fafbfc;
+  --ova-bg-2: #eaeef8;
+  --ova-bg-card: #fff;
+  --ova-ok: #1f8a4c;
+  --ova-ok-dark: #166b3a;
+  --ova-ok-soft: #e8f6ee;
+  --ova-neutral: #8a93a0;
+  --ova-scrim: rgba(35, 43, 82, .55);
+  --ova-machine-funnel: #38446c;
+  --ova-machine-body: #2e3856;
+  --ova-machine-screen: #d1f2e5;
+
+  /* Typography */
+  --ova-font: "Didact Gothic", Verdana, Helvetica, Arial, sans-serif;
+  --ova-font-receipt: "Courier New", Courier, monospace;
+  --ova-text-s: 1rem;
+  --ova-text-m: 1.125rem;
+  --ova-text-l: 1.3rem;
+  --ova-text-xl: 1.6rem;
+  --ova-leading: 1.55;
+  --ova-leading-title: 1.25;
+
+  /* Spacing */
+  --ova-space-1: 0.25rem;
+  --ova-space-2: 0.5rem;
+  --ova-space-3: 0.75rem;
+  --ova-space-4: 1rem;
+  --ova-space-5: 1.5rem;
+  --ova-space-6: 2rem;
+
+  /* Sizes */
+  --ova-content-max: 46rem;
+  --ova-figure-max: 28rem;
+  --ova-sidebar-width: 18rem;
+  --ova-drawer-max: 85vw;
+  --ova-topbar-height: 3.5rem;
+  --ova-touch: 2.75rem;
+  --ova-avatar: 2.25rem;
+  --ova-bubble-max: 85%;
+  --ova-field-width: 5.5rem;
+  --ova-slope-field: 5rem;
+  --ova-machine-width: 15rem;
+  --ova-receipt-width: 14rem;
+  --ova-receipt-max: 18rem;
+  --ova-receipt-tear: 0.625rem;
+  --ova-receipt-tooth: 1.25rem;
+  --ova-change-width: 6.5rem;
+  --ova-radio-mark: 1.25rem;
+  --ova-svg-text: 24px;
+  --ova-svg-text-compact: 21px;
+  --ova-svg-vertex: 7px;
+  --ova-svg-vertex-compact: 5px;
+  --ova-svg-point: 11px;
+  --ova-svg-point-compact: 8px;
+  --ova-stroke: 1px;
+  --ova-stroke-2: 2px;
+  --ova-stroke-focus: 3px;
+  --ova-stroke-accent: 4px;
+
+  /* Shape */
+  --ova-radius: 16px;
+  --ova-radius-btn: 12px;
+  --ova-radius-full: 999px;
+  --ova-shadow: 0 2px 10px rgba(35, 43, 82, .08);
+
+  /* Layers and motion */
+  --ova-z-topbar: 10;
+  --ova-z-scrim: 20;
+  --ova-z-drawer: 30;
+  --ova-motion: .2s ease;
+}

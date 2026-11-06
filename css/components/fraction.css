@@ -1,0 +1,13 @@
+.ova-frac {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: var(--ova-space-1);
+  vertical-align: middle;
+  line-height: var(--ova-leading-title);
+}
+.ova-frac__top {
+  padding-inline: var(--ova-space-1);
+  border-bottom: var(--ova-stroke-2) solid currentColor;
+}
+.ova-frac__bottom { padding-inline: var(--ova-space-1); }
