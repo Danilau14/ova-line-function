@@ -12,6 +12,7 @@
   function key(pair) { return pair[0] + "-" + pair[1]; }
 
   OVA.register("sagittal", {
+    figure: true,
     render: function (data, s) {
       var building = data.mode === "build";
       var arrows = (data.arrows || []).map(function (a) { return a.slice(); });
@@ -93,7 +94,15 @@
         });
       });
 
+      /* Read mode tells everything the drawing shows; in build mode the list of pairs does that. */
       var description = "Diagrama de flechas de " + data.left.title + " a " + data.right.title;
+      if (!building) {
+        description += ". " + data.left.title + ": " + data.left.items.join(", ") +
+          ". " + data.right.title + ": " + data.right.items.join(", ") +
+          ". Flechas: " + (arrows.length ? arrows.map(function (a) {
+            return data.left.items[a[0]] + " a " + data.right.items[a[1]];
+          }).join(", ") : "ninguna") + ".";
+      }
       var diagram = svg("svg", {
         class: "ova-sagittal__svg",
         viewBox: "0 0 " + W + " " + height,

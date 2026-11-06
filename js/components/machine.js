@@ -172,6 +172,7 @@
   }
 
   OVA.register("machine", {
+    figure: true,
     render: function (data, s) {
       /* The gate opens with the required machines; an optional one (the challenge) does not hold it. */
       var release = s.gate.hold();

@@ -253,6 +253,7 @@
   }
 
   OVA.register("chart", {
+    figure: true,
     render: function (data, s) {
       var body = data.mode === "segments" ? segmentsMode(data, s) : readMode(data, s);
       var card = OVA.dom.card(data, [

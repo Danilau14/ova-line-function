@@ -199,6 +199,7 @@
   }
 
   OVA.register("plane", {
+    figure: true,
     render: function (data, s) {
       return OVA.dom.card(data, [
         data.text ? el("div", { html: s.markdown.toHtml(data.text) }) : null,

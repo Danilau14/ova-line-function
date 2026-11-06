@@ -55,3 +55,5 @@ a { color: var(--ova-red-dark); }
     scroll-behavior: auto !important;
   }
 }
+
+.ova-figure-source { margin: var(--ova-space-1) 0 0; color: var(--ova-text-soft); font-size: var(--ova-text-s); font-style: italic; text-align: center; }

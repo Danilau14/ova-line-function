@@ -18,6 +18,7 @@
   }
 
   OVA.register("line-lab", {
+    figure: true,
     render: function (data, s) {
       var drawing = s.planeDrawing;
       var base = drawing.create(data, s.scale);

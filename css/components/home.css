@@ -56,6 +56,7 @@
   margin-inline: auto;
 }
 .ova-cover__graph { display: block; width: 100%; height: auto; }
+.ova-cover__art .ova-figure-source { color: var(--ova-text-inverse); }
 .ova-cover__ridges {
   position: absolute;
   inset: auto 0 -1px;
