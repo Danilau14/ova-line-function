@@ -35,6 +35,11 @@
 }
 
 /* A figure inside a question uses the full width: no second card around it. */
+.ova-quiz__question--missing {
+  outline: var(--ova-stroke-2) solid var(--ova-coral);
+  outline-offset: var(--ova-space-2);
+  border-radius: var(--ova-radius-btn);
+}
 .ova-quiz__question .ova-box {
   margin-bottom: var(--ova-space-3);
   padding: 0;

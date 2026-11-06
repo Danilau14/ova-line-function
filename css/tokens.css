@@ -18,6 +18,15 @@
   --ova-ok-soft: #e8f6ee;
   --ova-neutral: #8a93a0;
   --ova-scrim: rgba(35, 43, 82, .55);
+  --ova-cover-night: #161b3a;
+  --ova-cover-dusk: #5d3a6e;
+  --ova-cover-horizon: #e8735f;
+  --ova-cover-ridge-far: #4a3566;
+  --ova-cover-ridge-mid: #2c2a55;
+  --ova-cover-taxi: #ffc93c;
+  --ova-cover-taxi-glow: rgba(255, 201, 60, .3);
+  --ova-cover-grid: rgba(255, 255, 255, .14);
+  --ova-cover-axis: rgba(255, 255, 255, .7);
   --ova-machine-funnel: #38446c;
   --ova-machine-body: #2e3856;
   --ova-machine-screen: #d1f2e5;
@@ -29,6 +38,7 @@
   --ova-text-m: 1.125rem;
   --ova-text-l: 1.3rem;
   --ova-text-xl: 1.6rem;
+  --ova-text-cover: clamp(2.25rem, 6vw, 3.5rem);
   --ova-leading: 1.55;
   --ova-leading-title: 1.25;
 
@@ -42,6 +52,9 @@
 
   /* Sizes */
   --ova-content-max: 46rem;
+  --ova-cover-max: 72rem;
+  --ova-cover-ridge-height: 9rem;
+  --ova-cover-ridge-room: 7rem;
   --ova-figure-max: 28rem;
   --ova-sidebar-width: 18rem;
   --ova-drawer-max: 85vw;

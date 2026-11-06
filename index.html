@@ -3,22 +3,104 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Laura Daniela Pumarejo García">
+  <meta name="description" content="OVA de matemáticas para grado 9.º sobre funciones lineales y afines. Funciona sin conexión.">
+  <meta name="license" content="CC BY 4.0">
   <title>Funciones: explorando cambios</title>
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components/sidebar.css">
+  <link rel="stylesheet" href="css/components/home.css">
+  <link rel="stylesheet" href="css/components/license.css">
 </head>
 <body>
-  <header class="ova-topbar">
-    <h1 class="ova-topbar__title">Funciones: explorando cambios</h1>
+  <a class="ova-skip" href="#ova-content">Saltar al contenido</a>
+
+  <header class="ova-topbar" id="ova-topbar">
+    <button class="ova-topbar__toggle" id="ova-menu-toggle" type="button" aria-controls="ova-sidebar" aria-expanded="false" aria-label="Abrir menú"><span aria-hidden="true">☰</span></button>
+    <p class="ova-topbar__title">Matemáticas · 9.º grado</p>
   </header>
-  <main class="ova-container ova-home">
-    <p class="ova-home__subtitle">Matemáticas · 9.º grado · Funciones lineales y afines</p>
-    <h2 class="ova-page__title">Elige una sesión</h2>
-    <ul class="ova-home__list" id="ova-home-list"></ul>
-    <div id="ova-home-teacher"></div>
-  </main>
+
+  <div class="ova-shell">
+    <nav class="ova-sidebar" id="ova-sidebar" aria-label="Menú del curso">
+      <div class="ova-sidebar__head">
+        <p class="ova-sidebar__unit">Funciones: explorando cambios</p>
+        <button class="ova-sidebar__close" id="ova-menu-close" type="button" aria-label="Cerrar menú"><span aria-hidden="true">✕</span></button>
+      </div>
+      <div id="ova-course-menu"></div>
+    </nav>
+    <div class="ova-sidebar__scrim" id="ova-scrim"></div>
+
+    <div class="ova-shell__main" id="ova-main-column">
+      <main id="ova-content" tabindex="-1">
+        <section class="ova-cover" aria-labelledby="ova-cover-title">
+          <div class="ova-cover__inner">
+            <div class="ova-cover__text">
+              <p class="ova-cover__eyebrow">Funciones lineales y afines · f(x) = mx + b</p>
+              <h1 class="ova-cover__title" id="ova-cover-title">Funciones: explorando cambios</h1>
+              <div class="ova-cover__about" id="ova-home-about"></div>
+              <div class="ova-cover__actions">
+                <a class="ova-cover__link ova-cover__link--main" id="ova-home-start" href="session.html?s=1">Empezar la Sesión 1 →</a>
+                <a class="ova-cover__link" href="#ova-home-objectives-title">Ver los objetivos</a>
+              </div>
+            </div>
+            <div class="ova-cover__art">
+              <svg class="ova-cover__graph" viewBox="0 0 480 300" role="img" aria-label="Gráfica del costo según los kilómetros: las rectas del taxi y de la buseta arrancan en valores distintos y se cruzan en un punto, con la pregunta ¿cuál conviene?">
+                <path class="ova-graph__grid" d="M116.7 20V250M183.3 20V250M250 20V250M316.7 20V250M383.3 20V250M450 20V250M50 192.5H450M50 135H450M50 77.5H450M50 20H450"/>
+                <path class="ova-graph__axis" d="M50 12V250H460"/>
+                <path class="ova-graph__line ova-graph__line--bus ova-graph__glow" pathLength="1" d="M50 192.5L450 54.5"/>
+                <path class="ova-graph__line ova-graph__line--taxi ova-graph__glow" pathLength="1" d="M50 227L450 20"/>
+                <path class="ova-graph__line ova-graph__line--bus" pathLength="1" d="M50 192.5L450 54.5"/>
+                <path class="ova-graph__line ova-graph__line--taxi" pathLength="1" d="M50 227L450 20"/>
+                <circle class="ova-graph__point--bus" cx="50" cy="192.5" r="6"/>
+                <circle class="ova-graph__point--taxi" cx="50" cy="227" r="6"/>
+                <g class="ova-graph__appear">
+                  <circle class="ova-graph__halo" cx="250" cy="123.5" r="20"/>
+                  <circle class="ova-graph__cross" cx="250" cy="123.5" r="9"/>
+                  <text class="ova-graph__label ova-graph__label--end" x="236" y="96">¿Cuál conviene?</text>
+                  <text class="ova-graph__label ova-graph__label--taxi" x="350" y="38">Taxi</text>
+                  <text class="ova-graph__label ova-graph__label--end" x="450" y="102">Buseta</text>
+                </g>
+                <text class="ova-graph__label ova-graph__label--axis" x="62" y="34">Costo</text>
+                <text class="ova-graph__label ova-graph__label--axis ova-graph__label--end" x="460" y="280">Kilómetros</text>
+              </svg>
+            </div>
+          </div>
+          <svg class="ova-cover__ridges" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path class="ova-cover__ridge--far" d="M0 120L140 70L260 110L400 40L540 105L680 60L820 115L980 50L1100 95L1200 65V200H0Z"/>
+            <path class="ova-cover__ridge--mid" d="M0 150L180 105L330 145L500 90L700 150L880 110L1040 150L1200 115V200H0Z"/>
+            <path class="ova-cover__ridge--front" d="M0 185Q300 140 600 175T1200 160V200H0Z"/>
+          </svg>
+        </section>
+
+        <div class="ova-container ova-home">
+          <section class="ova-home__section" aria-labelledby="ova-home-objectives-title">
+            <h2 class="ova-home__heading" id="ova-home-objectives-title">Objetivos y sesiones</h2>
+            <div class="ova-home__objectives" id="ova-home-list"></div>
+            <p class="ova-home__note" id="ova-home-note"></p>
+          </section>
+          <section class="ova-home__section" aria-labelledby="ova-home-organization-title">
+            <h2 class="ova-home__heading" id="ova-home-organization-title">¿Cómo está organizado?</h2>
+            <p class="ova-home__note" id="ova-home-organization"></p>
+            <ul class="ova-home__steps" id="ova-home-steps"></ul>
+            <p class="ova-home__callout" id="ova-home-callout"></p>
+            <a class="ova-home__link" id="ova-home-references" href="references.html">📚 Ver las referencias</a>
+          </section>
+          <div id="ova-home-teacher"></div>
+        </div>
+      </main>
+      <footer class="ova-license ova-container">
+        <img class="ova-license__logo" src="css/images/cc-by.png" width="88" height="31" alt="Licencia Creative Commons Atribución 4.0">
+        <p class="ova-license__text">© 2026 Laura Daniela Pumarejo García. Este OVA tiene licencia <strong>Creative Commons Atribución 4.0 Internacional (CC BY 4.0)</strong>: puedes usarlo y adaptarlo, siempre que menciones a la autora. creativecommons.org/licenses/by/4.0/deed.es</p>
+      </footer>
+    </div>
+  </div>
+
   <script src="js/core/dom.js"></script>
+  <script src="js/core/sidebar.js"></script>
+  <script src="js/core/course-menu.js"></script>
+  <script src="js/services/markdown.js"></script>
   <script src="data/course.js"></script>
   <script src="js/home.js"></script>
 </body>

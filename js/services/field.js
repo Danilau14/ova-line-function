@@ -25,6 +25,7 @@
 
       return {
         element: wrapper,
+        hasValue: function () { return input.value.trim() !== ""; },
         check: function () {
           if (revealed) return "ok";
           var result = validator.validate("numeric", input.value, o.answer);

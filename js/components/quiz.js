@@ -13,6 +13,7 @@
     if (parts[1]) children.push(el("span", { html: s.markdown.inline(parts[1]) }));
     return {
       node: el("div", { class: "ova-quiz__line" }, children),
+      isAnswered: field.hasValue,
       check: field.check,
       reveal: field.reveal,
       answerText: OVA.dom.formatNumber(q.answer)
@@ -37,6 +38,7 @@
     return {
       node: node,
       answerText: options[expected],
+      isAnswered: function () { return radios.some(function (r) { return r.checked; }); },
       check: function () {
         if (revealed) return "ok";
         var chosen = radios.filter(function (r) { return r.checked; })[0];
@@ -67,6 +69,7 @@
     return {
       node: node,
       answerText: q.answer.map(function (i) { return q.options[i]; }).join(", "),
+      isAnswered: function () { return boxes.some(function (b) { return b.checked; }); },
       check: function () {
         if (revealed) return "ok";
         var chosen = boxes.filter(function (b) { return b.checked; }).map(function (b) { return Number(b.value); });
@@ -95,6 +98,8 @@
     return {
       element: wrapper,
       hint: q.hint,
+      isAnswered: question.isAnswered,
+      markMissing: function (missing) { wrapper.classList.toggle("ova-quiz__question--missing", missing); },
       check: function () {
         var result = question.check();
         if (revealed) return result;
@@ -117,11 +122,13 @@
   OVA.register("quiz", {
     render: function (data, s) {
       var questions = data.questions.map(function (q) { return createQuestion(q, s); });
-      var review = s.createReview({ items: questions });
+      /* A graded quiz has no button of its own: the page's exam-submit block sends everything together. */
+      if (data.graded) s.assessment.add(questions);
+      var review = data.graded ? null : s.createReview({ items: questions });
       return OVA.dom.card(data, [
         data.text ? el("div", { html: s.markdown.toHtml(data.text) }) : null,
         el("div", { class: "ova-quiz__questions" }, questions.map(function (q) { return q.element; })),
-        review.element
+        review ? review.element : null
       ], "ova-quiz");
     }
   });

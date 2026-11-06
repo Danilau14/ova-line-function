@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Laura Daniela Pumarejo García">
+  <meta name="license" content="CC BY 4.0">
+  <title>Referencias · Funciones: explorando cambios</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components/sidebar.css">
+  <link rel="stylesheet" href="css/components/home.css">
+  <link rel="stylesheet" href="css/components/license.css">
+</head>
+<body>
+  <a class="ova-skip" href="#ova-content">Saltar al contenido</a>
+
+  <header class="ova-topbar" id="ova-topbar">
+    <button class="ova-topbar__toggle" id="ova-menu-toggle" type="button" aria-controls="ova-sidebar" aria-expanded="false" aria-label="Abrir menú"><span aria-hidden="true">☰</span></button>
+    <p class="ova-topbar__title">Funciones: explorando cambios</p>
+  </header>
+
+  <div class="ova-shell">
+    <nav class="ova-sidebar" id="ova-sidebar" aria-label="Menú del curso">
+      <div class="ova-sidebar__head">
+        <p class="ova-sidebar__unit">Funciones: explorando cambios</p>
+        <button class="ova-sidebar__close" id="ova-menu-close" type="button" aria-label="Cerrar menú"><span aria-hidden="true">✕</span></button>
+      </div>
+      <div id="ova-course-menu"></div>
+    </nav>
+    <div class="ova-sidebar__scrim" id="ova-scrim"></div>
+
+    <div class="ova-shell__main" id="ova-main-column">
+      <main class="ova-container ova-home" id="ova-content" tabindex="-1">
+        <h1 class="ova-page__title">Referencias</h1>
+        <p class="ova-home__note" id="ova-references-intro"></p>
+        <div class="ova-home__objectives" id="ova-references-groups"></div>
+        <a class="ova-home__link" id="ova-references-home" href="index.html">← Volver al inicio</a>
+      </main>
+      <footer class="ova-license ova-container">
+        <img class="ova-license__logo" src="css/images/cc-by.png" width="88" height="31" alt="Licencia Creative Commons Atribución 4.0">
+        <p class="ova-license__text">© 2026 Laura Daniela Pumarejo García. Este OVA tiene licencia <strong>Creative Commons Atribución 4.0 Internacional (CC BY 4.0)</strong>: puedes usarlo y adaptarlo, siempre que menciones a la autora. creativecommons.org/licenses/by/4.0/deed.es</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/core/dom.js"></script>
+  <script src="js/core/sidebar.js"></script>
+  <script src="js/core/course-menu.js"></script>
+  <script src="js/services/markdown.js"></script>
+  <script src="data/course.js"></script>
+  <script src="data/references.js"></script>
+  <script src="js/references.js"></script>
+</body>
+</html>

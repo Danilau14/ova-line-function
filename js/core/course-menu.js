@@ -31,7 +31,10 @@
     })]) : null;
     OVA.dom.mount(container, el("ul", { class: "ova-menu__list" }, [
       el("li", {}, [el("a", { class: "ova-menu__link", href: "index.html" + (teacherMode ? "?teacher=1" : ""), text: "🏠 Inicio" })])
-    ].concat(items, [leaveTeacher])));
+    ].concat(items, [
+      el("li", {}, [el("a", { class: "ova-menu__link", href: "references.html" + (teacherMode ? "?teacher=1" : ""), text: "📚 Referencias" })]),
+      leaveTeacher
+    ])));
     return pageListSlot;
   };
 })(window.OVA);

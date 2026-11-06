@@ -30,6 +30,7 @@
 }
 .ova-topbar__title {
   min-width: 0;
+  margin: 0;
   color: inherit;
   font-size: var(--ova-text-m);
 }
@@ -75,7 +76,6 @@
   gap: var(--ova-space-4);
   padding-block: var(--ova-space-5);
 }
-.ova-home__subtitle { margin: 0; color: var(--ova-text-soft); font-size: var(--ova-text-s); }
 .ova-home__list {
   display: flex;
   flex-direction: column;

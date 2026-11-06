@@ -1,0 +1,13 @@
+.ova-license {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ova-space-3);
+  margin-top: var(--ova-space-5);
+  padding-block: var(--ova-space-4);
+  border-top: var(--ova-stroke) solid var(--ova-border);
+  color: var(--ova-text-soft);
+  font-size: var(--ova-text-s);
+}
+.ova-license__logo { flex: none; display: block; }
+.ova-license__text { flex: 1 1 14rem; margin: 0; }

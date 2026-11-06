@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="OVA-FUNCIONES-LINEALES" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <imsmd:lom>
+      <imsmd:general>
+        <imsmd:title><imsmd:langstring xml:lang="es-CO">Funciones: explorando cambios</imsmd:langstring></imsmd:title>
+        <imsmd:language>es-CO</imsmd:language>
+        <imsmd:description><imsmd:langstring xml:lang="es-CO">Objeto virtual de aprendizaje de matemáticas para grado 9.º sobre funciones lineales y afines, f(x) = mx + b. Funciona sin conexión.</imsmd:langstring></imsmd:description>
+        <imsmd:keyword><imsmd:langstring xml:lang="es-CO">función lineal; función afín; pendiente; intercepto; grado 9</imsmd:langstring></imsmd:keyword>
+      </imsmd:general>
+      <imsmd:lifecycle>
+        <imsmd:contribute>
+          <imsmd:role><imsmd:source><imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring></imsmd:source><imsmd:value><imsmd:langstring xml:lang="x-none">Author</imsmd:langstring></imsmd:value></imsmd:role>
+          <imsmd:centity><imsmd:vcard>BEGIN:VCARD VERSION:2.1 FN:Laura Daniela Pumarejo García END:VCARD</imsmd:vcard></imsmd:centity>
+        </imsmd:contribute>
+      </imsmd:lifecycle>
+      <imsmd:rights>
+        <imsmd:description><imsmd:langstring xml:lang="es-CO">Creative Commons Atribución 4.0 Internacional (CC BY 4.0). https://creativecommons.org/licenses/by/4.0/deed.es</imsmd:langstring></imsmd:description>
+      </imsmd:rights>
+    </imsmd:lom>
+  </metadata>
+  <organizations default="ORG-1">
+    <organization identifier="ORG-1">
+      <title>Funciones: explorando cambios</title>
+      <item identifier="ITEM-1" identifierref="RES-1">
+        <title>Funciones: explorando cambios</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="README.txt"/>
+      <file href="css/base.css"/>
+      <file href="css/components/box.css"/>
+      <file href="css/components/bridge.css"/>
+      <file href="css/components/button.css"/>
+      <file href="css/components/chart.css"/>
+      <file href="css/components/chat.css"/>
+      <file href="css/components/classify.css"/>
+      <file href="css/components/feedback.css"/>
+      <file href="css/components/field.css"/>
+      <file href="css/components/fraction.css"/>
+      <file href="css/components/home.css"/>
+      <file href="css/components/license.css"/>
+      <file href="css/components/machine.css"/>
+      <file href="css/components/mission.css"/>
+      <file href="css/components/nav.css"/>
+      <file href="css/components/plane.css"/>
+      <file href="css/components/quiz.css"/>
+      <file href="css/components/receipts.css"/>
+      <file href="css/components/sagittal.css"/>
+      <file href="css/components/sidebar.css"/>
+      <file href="css/components/slope.css"/>
+      <file href="css/components/summary.css"/>
+      <file href="css/components/table.css"/>
+      <file href="css/components/teacher-review.css"/>
+      <file href="css/fonts/OFL.txt"/>
+      <file href="css/fonts/didact-gothic-latin-400-normal.woff"/>
+      <file href="css/fonts/didact-gothic-latin-400-normal.woff2"/>
+      <file href="css/images/cc-by.png"/>
+      <file href="css/layout.css"/>
+      <file href="css/tokens.css"/>
+      <file href="css/utilities.css"/>
+      <file href="data/contexts.js"/>
+      <file href="data/course.js"/>
+      <file href="data/mission.js"/>
+      <file href="data/references.js"/>
+      <file href="data/session1.js"/>
+      <file href="data/session2.js"/>
+      <file href="data/session3.js"/>
+      <file href="data/session4.js"/>
+      <file href="data/session5.js"/>
+      <file href="data/session6.js"/>
+      <file href="data/session7.js"/>
+      <file href="index.html"/>
+      <file href="js/app.js"/>
+      <file href="js/components/box.js"/>
+      <file href="js/components/bridge.js"/>
+      <file href="js/components/chart.js"/>
+      <file href="js/components/chat.js"/>
+      <file href="js/components/classify.js"/>
+      <file href="js/components/exam-submit.js"/>
+      <file href="js/components/line-lab.js"/>
+      <file href="js/components/machine.js"/>
+      <file href="js/components/mission.js"/>
+      <file href="js/components/plane.js"/>
+      <file href="js/components/quiz.js"/>
+      <file href="js/components/receipts.js"/>
+      <file href="js/components/sagittal.js"/>
+      <file href="js/components/slope.js"/>
+      <file href="js/components/summary.js"/>
+      <file href="js/components/table.js"/>
+      <file href="js/components/teacher-review.js"/>
+      <file href="js/core/course-menu.js"/>
+      <file href="js/core/dom.js"/>
+      <file href="js/core/navigation.js"/>
+      <file href="js/core/registry.js"/>
+      <file href="js/core/renderer.js"/>
+      <file href="js/core/sidebar.js"/>
+      <file href="js/home.js"/>
+      <file href="js/references.js"/>
+      <file href="js/services/assessment.js"/>
+      <file href="js/services/feedback.js"/>
+      <file href="js/services/field.js"/>
+      <file href="js/services/gate.js"/>
+      <file href="js/services/hints.js"/>
+      <file href="js/services/markdown.js"/>
+      <file href="js/services/plane-drawing.js"/>
+      <file href="js/services/review.js"/>
+      <file href="js/services/scale.js"/>
+      <file href="js/services/scorm.js"/>
+      <file href="js/services/validator.js"/>
+      <file href="references.html"/>
+      <file href="session.html"/>
+    </resource>
+  </resources>
+</manifest>

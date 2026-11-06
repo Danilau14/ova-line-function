@@ -174,16 +174,17 @@
         title: "Evaluación final",
         minutes: 13,
         contexts: [],
-        teacherKey: "Sin puntaje: la retroalimentación es inmediata. Observa por objetivo: Parte 1 (O1), Parte 2 (O2), Parte 3 (O3), con los criterios SIEE. Claves: no, tiempo de carga, 10, 101; no, negativa, sube 4, lineal, 8, 2; regla con 3.000 y 2.000, 17.000, 3 horas.",
+        teacherKey: "El estudiante no ve puntaje. Un solo botón envía las tres partes. En la plataforma queda el porcentaje de aciertos y la sesión completada; si abre de nuevo la página y repite, se conserva el mejor. Sin plataforma no se guarda nada. Observa por objetivo: Parte 1 (O1), Parte 2 (O2), Parte 3 (O3), con los criterios SIEE. Claves: no, tiempo de carga, 10, 101; no, negativa, sube 4, lineal, 8, 2; regla con 3.000 y 2.000, 17.000, 3 horas.",
         blocks: [
           {
             type: "box",
             title: "Antes de empezar",
             icon: "📝",
-            text: "No hay cronómetro ni puntaje. Responde con calma y, si te equivocas, revisa la pista e inténtalo otra vez."
+            text: "No hay cronómetro. Responde las tres partes con calma y, cuando termines, pulsa **Enviar evaluación**, al final de la página. Se envía todo de una vez: después verás la explicación de lo que no acertaste. Si abriste el OVA desde la plataforma del colegio, tu docente verá qué porcentaje acertaste."
           },
           {
             type: "quiz",
+            graded: true,
             title: "Parte 1: funciones",
             icon: "1️⃣",
             questions: [
@@ -203,6 +204,7 @@
           },
           {
             type: "quiz",
+            graded: true,
             title: "Parte 2: pendiente e intercepto",
             icon: "2️⃣",
             questions: [
@@ -234,6 +236,7 @@
           },
           {
             type: "quiz",
+            graded: true,
             title: "Parte 3: modelar y decidir",
             icon: "3️⃣",
             text: "Un parqueadero cobra $2.000 de entrada y $3.000 por cada hora.",
@@ -243,6 +246,7 @@
               { type: "numeric", prompt: "Otro parqueadero cobra $5.000 de entrada y $2.000 por hora. Los dos cuestan lo mismo con ___ horas.", label: "Horas en que cuestan igual", answer: 3, hint: "Prueba con 1, 2 y 3 horas en cada regla.", explanation: "Con 3 horas: 3.000 · 3 + 2.000 = 11.000 y 2.000 · 3 + 5.000 = 11.000." }
             ]
           },
+          { type: "exam-submit", title: "Enviar evaluación", icon: "📨" },
           { type: "bridge", text: "Terminaste la revisión. ¡Solo falta salir de paseo!" }
         ]
       },

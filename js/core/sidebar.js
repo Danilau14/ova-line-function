@@ -34,9 +34,11 @@
     document.addEventListener("keydown", function (ev) {
       if (ev.key === "Escape" && isOpen() && isDrawer()) closeAndRefocus();
     });
-    column.addEventListener("change", function () { setOpen(column.matches); });
+    function initialState() { return !o.startClosed && column.matches; }
 
-    setOpen(column.matches);
+    column.addEventListener("change", function () { setOpen(initialState()); });
+
+    setOpen(initialState());
 
     return {
       /* After choosing a page on a small screen, the drawer gets out of the way. */

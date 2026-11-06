@@ -24,6 +24,10 @@
     createField: OVA.field.createService(OVA.validator),
     gate: OVA.gate.create()
   };
+  /* Teacher mode never sends results to the platform. */
+  services.assessment = OVA.assessment.create(function (percent) {
+    return teacherMode ? "teacher" : OVA.scorm.reportScore(percent);
+  });
   services.createReview = OVA.review.createService(OVA.hints, OVA.feedback, inline, services.gate);
 
   var requested = course.sessions.filter(function (x) { return String(x.id) === params.get("s"); })[0];
@@ -75,6 +79,7 @@
       pageListSlot: pageListSlot,
       onChange: function (index) {
         services.gate.begin(pages[index].id, teacherMode);
+        services.assessment.begin();
         var title = renderer.renderPage(pageToShow(pages[index]));
         sidebar.closeIfDrawer();
         window.scrollTo(0, 0);
